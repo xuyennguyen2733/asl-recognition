@@ -12,7 +12,15 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `ng build` to build the project. The build artifacts will be stored in the `docs/` directory.
+
+## Deploy to GitHub Pages
+
+Run `ng build --base-href /asl-recognition/`
+
+Add the changes and push to GitHub
+
+Website address: https://xuyennguyen2733.github.io/asl-recognition/
 
 ## Running unit tests
 

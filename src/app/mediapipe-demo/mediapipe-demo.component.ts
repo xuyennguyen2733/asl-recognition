@@ -84,7 +84,12 @@ export class MediapipeDemoComponent implements OnInit {
     
       if (video) {
         // Activate the webcam stream.
-        navigator.mediaDevices.getUserMedia(constraints).then(function (stream) {
+        navigator.mediaDevices.getUserMedia({
+          video: {
+            width: { ideal: 640 },
+            height: { ideal: 480 }
+          }
+        }).then(stream => {
           video.srcObject = stream;
           video.addEventListener("loadeddata", predictWebcam);
         });
@@ -136,6 +141,7 @@ export class MediapipeDemoComponent implements OnInit {
         if (results.gestures.length > 0 ) {
           gestureOutput.style.display = "block";
           gestureOutput.style.width = videoWidth;
+          gestureOutput.style.width = videoHeight;
           const categoryName = results.gestures[0][0].categoryName;
           const categoryScore = parseFloat(
             String(results.gestures[0][0].score * 100)

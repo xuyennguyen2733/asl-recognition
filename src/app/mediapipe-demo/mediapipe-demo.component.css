@@ -1,0 +1,5 @@
+#webcam {
+  width: 640px;  /* Ensure this matches the webcam's resolution or desired display size */
+  height: 480px; /* Ensure this matches the webcam's resolution or desired display size */
+  object-fit: contain; /* or 'cover', depending on your needs */
+}
