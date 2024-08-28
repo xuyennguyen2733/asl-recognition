@@ -33,7 +33,7 @@ export class MediapipeDemoComponent implements OnInit {
       gestureRecognizer = await GestureRecognizer.createFromOptions(vision, {
         baseOptions: {
           modelAssetPath:
-            "https://storage.googleapis.com/mediapipe-models/gesture_recognizer/gesture_recognizer/float16/1/gesture_recognizer.task",
+            "mp_model/alphabet_recognizer.task",
           delegate: "GPU"
         },
         runningMode: runningMode
